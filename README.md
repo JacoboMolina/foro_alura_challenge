@@ -56,6 +56,48 @@ Esta es una API para gestionar tópicos en el foro Alura, desarrollada con Java 
 
 ### Uso de la API
 
+### EndPoints 
+
+#### Nuevo Topico
+
+POST /topics
+Content-Type: application/json
+Authorization: Bearer <token>
+
+{
+    "title": "Título del tópico",
+    "message": "Contenido del mensaje",
+    "author": "Autor"
+}
+
+#### Topicos creados
+
+GET /topics
+Authorization: Bearer <token>
+
+#### Topico especifico
+
+GET /topics/{id}
+Authorization: Bearer <token>
+
+#### Actualizar especifico
+
+PUT /topics/{id}
+Content-Type: application/json
+Authorization: Bearer <token>
+
+{
+    "title": "Nuevo título del tópico",
+    "message": "Nuevo contenido del mensaje",
+    "author": "Nuevo autor"
+}
+
+#### Eliminar especifico
+
+DELETE /topics/{id}
+Authorization: Bearer <token>
+
+
 #### Autenticación
 
 Obtén un token JWT autenticándote con el endpoint de login:
@@ -68,3 +110,5 @@ Content-Type: application/json
     "username": "usuario",
     "password": "contraseña"
 }
+
+
