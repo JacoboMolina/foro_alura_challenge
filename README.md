@@ -59,7 +59,7 @@ Esta es una API para gestionar tópicos en el foro Alura, desarrollada con Java 
 ### EndPoints 
 
 #### Nuevo Topico
-
+```bash
 POST /topics
 Content-Type: application/json
 Authorization: Bearer <token>
@@ -69,19 +69,19 @@ Authorization: Bearer <token>
     "message": "Contenido del mensaje",
     "author": "Autor"
 }
-
+ ```
 #### Topicos creados
-
+```bash
 GET /topics
 Authorization: Bearer <token>
-
+ ```
 #### Topico especifico
-
+```bash
 GET /topics/{id}
 Authorization: Bearer <token>
-
+ ```
 #### Actualizar especifico
-
+```bash
 PUT /topics/{id}
 Content-Type: application/json
 Authorization: Bearer <token>
@@ -91,12 +91,12 @@ Authorization: Bearer <token>
     "message": "Nuevo contenido del mensaje",
     "author": "Nuevo autor"
 }
-
+```
 #### Eliminar especifico
-
+```bash
 DELETE /topics/{id}
 Authorization: Bearer <token>
-
+```
 
 #### Autenticación
 
